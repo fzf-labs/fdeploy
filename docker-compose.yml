@@ -1,0 +1,348 @@
+version: '3.7'
+networks:
+  deploy:
+    driver: ${NETWORKS_DRIVER}
+services:
+  portainer:
+    container_name: portainer
+    image: 'portainer/portainer-ce:latest'
+    restart: always
+    ports:
+      - '${PORTAINER_PORT}:8000'
+      - '${PORTAINER_HTTP_PORT}:9000'
+      - '${PORTAINER_HTTPS_PORT}:9443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer/data:/data
+    networks:
+      - deploy
+  golang:
+    container_name: golang
+    build:
+      context: ./golang                  # 指定构建使用的 Dockerfile 文件
+    environment:
+      TZ: ${TZ}
+      GOPROXY: https://goproxy.cn,direct
+    working_dir: /code
+    volumes:
+      - ${GOLANG_CODE_PATH}:/code  # 引用 .env 配置中 CODE_PATH 变量，将宿主机上代码存放的目录挂载到容器中
+    privileged: true
+    ports:
+      - "30000:30000"
+      - "31001:31001"
+      - "31002:31002"
+      - "31003:31003"
+      - "30004:30004"
+      - "31004:31004"
+      - "30005:30005"
+      - "31005:31005"
+      - "30006:30006"
+      - "31006:31006"
+      - "31007:31007"
+      - "30008:30008"
+      - "31008:31008"
+      - "30009:30009"
+      - "31009:31009"
+      - "30010:30010"
+      - "31010:31010"
+      - "30011:30011"
+      - "31011:31011"
+      - "31012:31012"
+    logging:
+      #日志驱动
+      driver: "json-file"
+      options:
+        #日志大小
+        max-size: "5m"
+        #日志数量
+        max-file: "3"
+    networks:
+      - deploy
+  web-backend:
+    container_name: web-backend
+    image: nginx:1.19.0-alpine
+    restart: always
+    volumes:
+      - ./web/backend/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ${WEB_BACKEND_CODE_PATH}:/app  # 引用 .env 配置中 CODE_PATH 变量，将宿主机上代码存放的目录挂载到容器中
+    ports:
+      - "32000:80"
+    networks:
+      - deploy
+  web-share:
+    container_name: web-share
+    image: nginx:1.19.0-alpine
+    restart: always
+    volumes:
+      - ./web/share/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ${WEB_SHARE_CODE_PATH}:/app  # 引用 .env 配置中 CODE_PATH 变量，将宿主机上代码存放的目录挂载到容器中
+    ports:
+      - "32001:80"
+    networks:
+      - deploy
+  web-xy:
+    container_name: web-xy
+    image: nginx:1.19.0-alpine
+    restart: always
+    volumes:
+      - ./web/xy/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ${WEB_XY_CODE_PATH}:/app  # 引用 .env 配置中 CODE_PATH 变量，将宿主机上代码存放的目录挂载到容器中
+    ports:
+      - "32000:80"
+    networks:
+      - deploy
+  mysql:
+    container_name: mysql
+    image: 'mysql:8.0.21'
+    # 重启策略
+    restart: always
+    environment:
+      # 时区上海
+      TZ: ${TZ}
+      # root 密码
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      # 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
+      MYSQL_USER: ${MYSQL_USERNAME}
+      # 用户密码
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      # 映射端口
+    volumes:
+      # 数据挂载
+      - ./mysql/data/:/var/lib/mysql/
+      # 配置挂载
+      - ./mysql/conf/:/etc/mysql/conf.d/
+      # 初始化目录挂载
+      - ./mysql/init/:/docker-entrypoint-initdb.d/
+    command:
+      # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+    ports:
+      - "${MYSQL_PORT}:3306"                          # 设置容器 3306 端口映射指定宿主机端口
+    networks:
+      - deploy
+  redis:
+    container_name: redis
+    image: 'redis:6.0.9-alpine'
+    restart: always
+    environment:
+      - TZ=${TZ}
+    command: [ "redis-server", "--appendonly", "yes", "--requirepass","${REDIS_PASS}" ]
+    volumes:
+      - ./redis/data:/data/:rw
+    ports:
+      - "${REDIS_PORT}:6379"
+    networks:
+      - deploy
+  mysql-manage:
+    container_name: mysql-manage
+    image: 'phpmyadmin/phpmyadmin:5.1.3'
+    restart: always
+    environment:
+      - TZ=${TZ}
+      - PMA_ARBITRARY=1
+      - PMA_HOST=${MYSQL_MANAGE_CONNECT_HOST}             # 设置连接的 Mysql 服务 host，可以是 Mysql 服务容器的名称，也可以是 Mysql 服务容器的 ip 地址
+      - PMA_PORT=${MYSQL_MANAGE_CONNECT_PORT}             # 设置连接的 Mysql 服务端口号
+    ports:
+      - "${MYSQL_MANAGE_PORT}:80"                         # 设置容器 80 端口映射指定宿主机端口，用于宿主机访问可视化web
+    networks:
+      - deploy
+  redis-manage:
+    container_name: redis-manage
+    image: 'erikdubbelboer/phpredisadmin:latest'
+    restart: always
+    environment:
+      - TZ=${TZ}
+      - ADMIN_USER=${REDIS_MANAGE_USERNAME}           # 设置 Redis 可视化管理的用户名称
+      - ADMIN_PASS=${REDIS_MANAGE_PASSWORD}           # 设置 Redis 可视化管理的用户密码
+      - REDIS_1_HOST=${REDIS_MANAGE_CONNECT_HOST}     # 设置连接的 Redis 服务 host，可以是 Redis 服务容器的名称，也可以是 Redis 服务容器的 ip 地址
+      - REDIS_1_PORT=${REDIS_MANAGE_CONNECT_PORT}     # 设置连接的 Redis 服务端口号
+      - REDIS_1_AUTH=${REDIS_MANAGE_CONNECT_PASS}     # 设置连接的 Redis 密码
+    ports:
+      - "${REDIS_MANAGE_PORT}:80"                     # 设置容器80端口映射指定宿主机端口，用于宿主机访问可视化web
+      # 在 Redis 服务容器启动后启动
+    networks:
+      - deploy
+  asynq-manage:
+    image: 'hibiken/asynqmon:latest'
+    container_name: asynq-manage
+    restart: always
+    ports:
+      - "${ASYNQ_MANAGE_PORT}:8080"
+    command:
+      - "--redis-addr=${ASYNQ_MANAGE_REDIS_CONNECT_HOST}:${ASYNQ_MANAGE_REDIS_CONNECT_PORT}"
+      - "--redis-password=${ASYNQ_MANAGE_REDIS_CONNECT_PASS}"
+    networks:
+      - deploy
+  elasticsearch:
+    image: elasticsearch:7.14.1
+    container_name: elasticsearch
+    user: root
+    environment:
+      TZ: Asia/Shanghai
+      LANG: en_US.UTF-8
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      ELASTIC_PASSWORD: "${ELASTIC_PASSWORD}" # elastic账号密码
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/logs:/usr/share/elasticsearch/logs
+    #      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    #      - ./elasticsearch/config/jvm.options:/usr/share/elasticsearch/config/jvm.options
+    ports:
+      - "${ELASTIC_PORT1}:9200"
+      - "${ELASTIC_PORT2}:9300"
+    networks:
+      - deploy
+  jaeger:
+    container_name: jaeger
+    image: 'jaegertracing/all-in-one:latest'
+    environment:
+      - TZ=${TZ}
+      - SPAN_STORAGE_TYPE=elasticsearch
+      - ES_SERVER_URLS=${JAEGER_ES_SERVER_URLS}
+      - LOG_LEVEL=debug
+    ports:
+      - "${JAEGER_PORT}:16686"                        # 设置容器16686端口映射指定宿主机端口，用于宿主机访问可视化web
+      - "5775:5775/udp"
+      - "6831:6831/udp"
+      - "6832:6832/udp"
+      - "5778:5778"
+      - "14268:14268"
+      - "14250:14250"
+      - "9411:9411"
+    depends_on:
+      - elasticsearch
+    networks:
+      - deploy
+  prometheus:
+    container_name: prometheus
+    image: 'bitnami/prometheus:latest'
+    environment:
+      - TZ=${TZ}
+    ports:
+      - "${PROMETHEUS_PORT}:9090"                     # 设置容器9090端口映射指定宿主机端口，用于宿主机访问可视化web
+    volumes:
+      - ./prometheus/prometheus.yml:/opt/bitnami/prometheus/conf/prometheus.yml  # 将 prometheus 配置文件挂载到容器里
+    networks:
+      - deploy
+  etcd:
+    container_name: etcd
+    image: 'bitnami/etcd:3.4.15'
+    restart: always
+    privileged: true
+    volumes:
+      - ./etcd:/bitnami/etcd
+    environment:
+      - TZ=${TZ}
+      - ETCD_ENABLE_V2=true
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+    ports:
+      - "${ETCD_PORT}:2379"
+    networks:
+      - deploy
+  grafana:
+    container_name: grafana
+    image: 'grafana/grafana:latest'
+    restart: always
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/log:/var/log/grafana
+      - ./grafana/conf/provisioning:/etc/grafana/provisioning
+      - ./grafana/conf/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/conf/config/grafana.ini:/etc/grafana/grafana.ini
+    ports:
+      - "${GRAFANA_PORT}:3000"
+    networks:
+      - deploy
+  dtm:
+    container_name: dtm
+    image: 'yedf/dtm'
+    restart: always
+    environment:
+      - TZ=${TZ}
+    entrypoint:
+      - "/app/dtm/dtm"
+      - "-c=/app/dtm/configs/config.yaml"
+    volumes:
+      - ./dtm/config.yml:/app/dtm/configs/config.yaml # 将 dtm 配置文件挂载到容器里
+    ports:
+      - "${DTM_HTTP_PORT}:36789"
+      - "${DTM_GRPC_PORT}:36790"
+    networks:
+      - deploy
+  apisix-dashboard:
+    container_name: apisix-dashboard
+    image: apache/apisix-dashboard:2.13-alpine
+    restart: always
+    volumes:
+      - ./apisix-dashboard/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
+    ports:
+      - "${APISIX_DASHBOARD_PORT}:9000"
+    networks:
+      - deploy
+  apisix:
+    container_name: apisix
+    image: apache/apisix:2.14.1-alpine
+    restart: always
+    volumes:
+      - ./apisix/logs:/usr/local/apisix/logs
+      - ./apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
+    depends_on:
+      - etcd
+    ##network_mode: host
+    ports:
+      - "${APISIX_HTTP_PORT}:9080/tcp"
+      - "${APISIX_HTTPS_PORT}:9443/tcp"
+      - "${APISIX_PORT1}:9091/tcp"
+      - "${APISIX_PORT2}:9092/tcp"
+    networks:
+      - deploy
+  apisix-nginx1:
+    container_name: apisix-nginx1
+    image: nginx:1.19.0-alpine
+    restart: always
+    volumes:
+      - ./apisix-nginx/nginx1.conf:/etc/nginx/nginx.conf
+    ports:
+      - "${APISIX_NGINX1_PORT}:80/tcp"
+    environment:
+      - NGINX_PORT=80
+    networks:
+      - deploy
+  apisix-nginx2:
+    container_name: apisix-nginx2
+    image: nginx:1.19.0-alpine
+    restart: always
+    volumes:
+      - ./apisix-nginx/nginx2.conf:/etc/nginx/nginx.conf
+    ports:
+      - "${APISIX_NGINX2_PORT}:80/tcp"
+    environment:
+      - NGINX_PORT=80
+    networks:
+      - deploy
+  pyroscope:
+    container_name: pyroscope
+    image: "pyroscope/pyroscope:latest"
+    ports:
+      - "${PYROSCOPE_PORT}:4040"
+    environment:
+      ## 限制必须使用 API 秘钥上传
+      - PYROSCOPE_AUTH_INGESTION_ENABLED=false
+      ## 设置账号密码登录后台
+      - PYROSCOPE_AUTH_INTERNAL_ENABLED=true
+    volumes:
+      ## 设置数据共享目录
+      - ./pyroscope:/var/lib/pyroscope
+    command:
+      - "server"
+    networks:
+      - deploy

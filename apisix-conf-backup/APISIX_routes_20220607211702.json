@@ -1,0 +1,3608 @@
+{
+  "components": {},
+  "info": {
+    "title": "RoutesExport",
+    "version": "3.0.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/admin/{params}": {
+      "delete": {
+        "operationId": "管理后台DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "管理后台GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "管理后台HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "管理后台PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "管理后台POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "管理后台PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147366593",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-plugins": {
+          "proxy-rewrite": {
+            "regex_uri": ["^.+admin/?(.*)$", "/$1"]
+          }
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30000,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/behavior/{params}": {
+      "delete": {
+        "operationId": "行为服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "行为服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "行为服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "行为服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "行为服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "行为服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147432129",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "alili",
+            "port": 30009,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/game/{params}": {
+      "delete": {
+        "operationId": "漫画服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "漫画服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "漫画服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "漫画服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "漫画服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "漫画服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147497665",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30005,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/home/{params}": {
+      "delete": {
+        "operationId": "首页服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "首页服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "首页服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "首页服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "首页服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "首页服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147563201",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30011,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/member/{params}": {
+      "delete": {
+        "operationId": "用户服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "用户服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "用户服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "用户服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "用户服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "用户服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147628737",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30004,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/message/{params}": {
+      "delete": {
+        "operationId": "站内信服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "站内信服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "站内信服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "站内信服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "站内信服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "站内信服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544130458305",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30010,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/shortbook/{params}": {
+      "delete": {
+        "operationId": "超短本服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "超短本服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "超短本服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "超短本服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "超短本服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "超短本服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147235521",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30006,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    },
+    "/wallet/{params}": {
+      "delete": {
+        "operationId": "钱包服务DELETE",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "get": {
+        "operationId": "钱包服务GET",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "head": {
+        "operationId": "钱包服务HEAD",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "patch": {
+        "operationId": "钱包服务PATCH",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "post": {
+        "operationId": "钱包服务POST",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      },
+      "put": {
+        "operationId": "钱包服务PUT",
+        "parameters": [{
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }, {
+          "description": "params in path",
+          "in": "path",
+          "name": "params",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "requestBody": {},
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-apisix-enable_websocket": false,
+        "x-apisix-id": "411170544147301057",
+        "x-apisix-labels": {
+          "API_VERSION": "v1"
+        },
+        "x-apisix-priority": 0,
+        "x-apisix-status": 1,
+        "x-apisix-upstream": {
+          "nodes": [{
+            "host": "golang",
+            "port": 30008,
+            "weight": 1
+          }],
+          "timeout": {
+            "connect": 6,
+            "send": 6,
+            "read": 6
+          },
+          "type": "roundrobin",
+          "scheme": "http",
+          "pass_host": "pass",
+          "keepalive_pool": {
+            "idle_timeout": 60,
+            "requests": 1000,
+            "size": 320
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+# - "first_rules.yml"
+# - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ "0.0.0.0:9090" ]
+
+  # 项目配置
+  - job_name: "apisix"
+    scrape_interval: 5s
+    metrics_path: "/apisix/prometheus/metrics"
+    static_configs:
+      - targets: [ "apisix:9091" ]
+
+  - job_name: 'admin-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30500' ]
+        labels:
+          job: admin-api
+          app: admin-api
+          
+
+  - job_name: 'identity-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31501' ]
+        labels:
+          job: identity-rpc
+          app: identity-rpc
+          
+
+  - job_name: 'common-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31502' ]
+        labels:
+          job: common-rpc
+          app: common-rpc
+          
+
+  - job_name: 'mq-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31503' ]
+        labels:
+          job: mq-rpc
+          app: mq-rpc
+          
+
+  - job_name: 'member-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30504' ]
+        labels:
+          job: member-api
+          app: member-api
+          
+
+  - job_name: 'member-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31504' ]
+        labels:
+          job: member-rpc
+          app: member-rpc
+          
+
+  - job_name: 'game-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30505' ]
+        labels:
+          job: game-api
+          app: game-api
+          
+
+  - job_name: 'game-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31505' ]
+        labels:
+          job: game-rpc
+          app: game-rpc
+          
+
+  - job_name: 'shortbook-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30506' ]
+        labels:
+          job: shortbook-api
+          app: shortbook-api
+          
+
+  - job_name: 'shortbook-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31506' ]
+        labels:
+          job: shortbook-rpc
+          app: shortbook-rpc
+          
+
+  - job_name: 'system-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31507' ]
+        labels:
+          job: system-rpc
+          app: system-rpc
+          
+
+  - job_name: 'wallet-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30508' ]
+        labels:
+          job: wallet-api
+          app: wallet-api
+          
+
+  - job_name: 'wallet-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31508' ]
+        labels:
+          job: wallet-rpc
+          app: wallet-rpc
+          
+
+  - job_name: 'behavior-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30509' ]
+        labels:
+          job: behavior-api
+          app: behavior-api
+          
+
+  - job_name: 'behavior-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31509' ]
+        labels:
+          job: behavior-rpc
+          app: behavior-rpc
+          
+
+  - job_name: 'message-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30510' ]
+        labels:
+          job: message-api
+          app: message-api
+          
+
+  - job_name: 'message-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31510' ]
+        labels:
+          job: message-rpc
+          app: message-rpc
+          
+
+  - job_name: 'home-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30511' ]
+        labels:
+          job: home-api
+          app: home-api
+          
+
+  - job_name: 'home-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31511' ]
+        labels:
+          job: home-rpc
+          app: home-rpc
+          
+
+  - job_name: 'file-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31512' ]
+        labels:
+          job: file-rpc
+          app: file-rpc
+          

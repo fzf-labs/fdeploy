@@ -1,0 +1,10 @@
+.idea/
+apisix/logs/
+elasticsearch/data/
+elasticsearch/logs/
+etcd/data/
+grafana/data/
+mysql/data/
+portainer/data/
+redis/data/
+pyroscope
