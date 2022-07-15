@@ -193,4 +193,17 @@ scrape_configs:
         labels:
           job: file-rpc
           app: file-rpc
-          
+
+  - job_name: 'weixin-api'
+    static_configs:
+      - targets: [ '172.18.0.1:30513' ]
+        labels:
+          job: weixin-api
+          app: weixin-api
+
+  - job_name: 'weixin-rpc'
+    static_configs:
+      - targets: [ '172.18.0.1:31513' ]
+        labels:
+          job: weixin-rpc
+          app: weixin-rpc
