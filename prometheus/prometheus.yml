@@ -37,7 +37,7 @@ scrape_configs:
 
   - job_name: 'admin-api'
     static_configs:
-      - targets: [ '172.18.0.1:30500' ]
+      - targets: [ 'golang:30500' ]
         labels:
           job: admin-api
           app: admin-api
@@ -45,7 +45,7 @@ scrape_configs:
 
   - job_name: 'identity-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31501' ]
+      - targets: [ 'golang:31501' ]
         labels:
           job: identity-rpc
           app: identity-rpc
@@ -53,7 +53,7 @@ scrape_configs:
 
   - job_name: 'common-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31502' ]
+      - targets: [ 'golang:31502' ]
         labels:
           job: common-rpc
           app: common-rpc
@@ -61,7 +61,7 @@ scrape_configs:
 
   - job_name: 'mq-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31503' ]
+      - targets: [ 'golang:31503' ]
         labels:
           job: mq-rpc
           app: mq-rpc
@@ -69,7 +69,7 @@ scrape_configs:
 
   - job_name: 'member-api'
     static_configs:
-      - targets: [ '172.18.0.1:30504' ]
+      - targets: [ 'golang:30504' ]
         labels:
           job: member-api
           app: member-api
@@ -77,7 +77,7 @@ scrape_configs:
 
   - job_name: 'member-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31504' ]
+      - targets: [ 'golang:31504' ]
         labels:
           job: member-rpc
           app: member-rpc
@@ -85,7 +85,7 @@ scrape_configs:
 
   - job_name: 'game-api'
     static_configs:
-      - targets: [ '172.18.0.1:30505' ]
+      - targets: [ 'golang:30505' ]
         labels:
           job: game-api
           app: game-api
@@ -93,7 +93,7 @@ scrape_configs:
 
   - job_name: 'game-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31505' ]
+      - targets: [ 'golang:31505' ]
         labels:
           job: game-rpc
           app: game-rpc
@@ -101,7 +101,7 @@ scrape_configs:
 
   - job_name: 'shortbook-api'
     static_configs:
-      - targets: [ '172.18.0.1:30506' ]
+      - targets: [ 'golang:30506' ]
         labels:
           job: shortbook-api
           app: shortbook-api
@@ -109,7 +109,7 @@ scrape_configs:
 
   - job_name: 'shortbook-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31506' ]
+      - targets: [ 'golang:31506' ]
         labels:
           job: shortbook-rpc
           app: shortbook-rpc
@@ -117,7 +117,7 @@ scrape_configs:
 
   - job_name: 'system-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31507' ]
+      - targets: [ 'golang:31507' ]
         labels:
           job: system-rpc
           app: system-rpc
@@ -125,7 +125,7 @@ scrape_configs:
 
   - job_name: 'wallet-api'
     static_configs:
-      - targets: [ '172.18.0.1:30508' ]
+      - targets: [ 'golang:30508' ]
         labels:
           job: wallet-api
           app: wallet-api
@@ -133,7 +133,7 @@ scrape_configs:
 
   - job_name: 'wallet-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31508' ]
+      - targets: [ 'golang:31508' ]
         labels:
           job: wallet-rpc
           app: wallet-rpc
@@ -141,7 +141,7 @@ scrape_configs:
 
   - job_name: 'behavior-api'
     static_configs:
-      - targets: [ '172.18.0.1:30509' ]
+      - targets: [ 'golang:30509' ]
         labels:
           job: behavior-api
           app: behavior-api
@@ -149,7 +149,7 @@ scrape_configs:
 
   - job_name: 'behavior-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31509' ]
+      - targets: [ 'golang:31509' ]
         labels:
           job: behavior-rpc
           app: behavior-rpc
@@ -157,7 +157,7 @@ scrape_configs:
 
   - job_name: 'message-api'
     static_configs:
-      - targets: [ '172.18.0.1:30510' ]
+      - targets: [ 'golang:30510' ]
         labels:
           job: message-api
           app: message-api
@@ -165,7 +165,7 @@ scrape_configs:
 
   - job_name: 'message-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31510' ]
+      - targets: [ 'golang:31510' ]
         labels:
           job: message-rpc
           app: message-rpc
@@ -173,7 +173,7 @@ scrape_configs:
 
   - job_name: 'home-api'
     static_configs:
-      - targets: [ '172.18.0.1:30511' ]
+      - targets: [ 'golang:30511' ]
         labels:
           job: home-api
           app: home-api
@@ -181,7 +181,7 @@ scrape_configs:
 
   - job_name: 'home-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31511' ]
+      - targets: [ 'golang:31511' ]
         labels:
           job: home-rpc
           app: home-rpc
@@ -189,21 +189,21 @@ scrape_configs:
 
   - job_name: 'file-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31512' ]
+      - targets: [ 'golang:31512' ]
         labels:
           job: file-rpc
           app: file-rpc
 
   - job_name: 'weixin-api'
     static_configs:
-      - targets: [ '172.18.0.1:30513' ]
+      - targets: [ 'golang:30513' ]
         labels:
           job: weixin-api
           app: weixin-api
 
   - job_name: 'weixin-rpc'
     static_configs:
-      - targets: [ '172.18.0.1:31513' ]
+      - targets: [ 'golang:31513' ]
         labels:
           job: weixin-rpc
           app: weixin-rpc

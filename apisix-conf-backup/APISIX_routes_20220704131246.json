@@ -106,7 +106,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -230,7 +230,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -354,7 +354,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -478,7 +478,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -602,7 +602,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -726,7 +726,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -850,7 +850,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -974,7 +974,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1098,7 +1098,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "console-aboard.alili.xgames.cool",
+        "x-apisix-host": "console-aboard.fdev.xgames.cool",
         "x-apisix-id": "411438063382692548",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1208,7 +1208,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1311,7 +1311,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1414,7 +1414,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1517,7 +1517,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1620,7 +1620,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1723,7 +1723,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147432129",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1796,7 +1796,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1867,7 +1867,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -1938,7 +1938,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2009,7 +2009,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2080,7 +2080,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2151,7 +2151,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411289854496735937",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2208,7 +2208,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2263,7 +2263,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2318,7 +2318,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2373,7 +2373,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2428,7 +2428,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2483,7 +2483,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147497665",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2564,7 +2564,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147563201",
         "x-apisix-labels": {
           "API_VERSION": "v1"
@@ -2643,7 +2643,7 @@
         },
         "security": [],
         "x-apisix-enable_websocket": false,
-        "x-apisix-host": "api-aboard.alili.xgames.cool",
+        "x-apisix-host": "api-aboard.fdev.xgames.cool",
         "x-apisix-id": "411170544147563201",
         "x-apisix-labels": {
           "API_VERSION": "v1"
