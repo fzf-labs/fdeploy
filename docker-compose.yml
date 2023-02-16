@@ -280,7 +280,7 @@ services:
       - deploy
   apisix-dashboard:
     container_name: apisix-dashboard
-    image: apache/apisix-dashboard:2.13-alpine
+    image: apache/apisix-dashboard:3.0.0-alpine
     restart: always
     volumes:
       - ./apisix-dashboard/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
@@ -290,10 +290,9 @@ services:
       - deploy
   apisix:
     container_name: apisix
-    image: apache/apisix:2.14.1-alpine
+    image: apache/apisix:3.1.0-debian
     restart: always
     volumes:
-      - ./apisix/logs:/usr/local/apisix/logs
       - ./apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
     depends_on:
       - etcd
