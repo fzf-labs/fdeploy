@@ -9,3 +9,5 @@ portainer/data/
 redis/data/
 pyroscope
 postgresql
+rabbitmq/data
+rabbitmq/log
