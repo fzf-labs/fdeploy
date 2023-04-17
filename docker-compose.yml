@@ -60,9 +60,11 @@ services:
       - deploy
   mysql:
     container_name: mysql
+    hostname: mysql
     image: 'mysql:8.0.21'
     # 重启策略
     restart: always
+    platform: linux/x86_64
     environment:
       # 时区上海
       TZ: ${TZ}
@@ -89,6 +91,8 @@ services:
       --lower_case_table_names=1
     ports:
       - "${MYSQL_PORT}:3306"                          # 设置容器 3306 端口映射指定宿主机端口
+    expose:
+      - 3306
     networks:
       - deploy
   postgresql:
@@ -123,6 +127,8 @@ services:
       - ./redis/data:/data/:rw
     ports:
       - "${REDIS_PORT}:6379"
+    expose:
+      - 6379
     networks:
       - deploy
   mysql-manage:
@@ -349,5 +355,22 @@ services:
       - ./pyroscope:/var/lib/pyroscope
     command:
       - "server"
+    networks:
+      - deploy
+  polaris:
+    container_name: polaris
+    hostname: polaris
+    image: polarismesh/polaris-server-standalone:latest
+    restart: always
+    ports: # 用于其他服务访问北极星
+      - "15010:15010"
+      - "8101:8101"
+      - "8100:8100"
+      - "18080:8080"
+      - "8090:8090"
+      - "8091:8091"
+      - "8093:8093"
+      - "8761:8761"
+      - "9090:9090"
     networks:
       - deploy
