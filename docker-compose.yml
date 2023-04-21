@@ -362,6 +362,7 @@ services:
     hostname: polaris
     image: polarismesh/polaris-server-standalone:latest
     restart: always
+    privileged: true
     ports: # 用于其他服务访问北极星
       - "15010:15010"
       - "8101:8101"
@@ -372,5 +373,21 @@ services:
       - "8093:8093"
       - "8761:8761"
       - "9090:9090"
+    networks:
+      - deploy
+  nacos:
+    image: nacos/nacos-server:v2.2.2
+    container_name: nacos
+    restart: always
+    env_file:
+      - ./nacos/env/nacos-standlone-mysql.env
+    volumes:
+      - ./nacos/logs/:/home/nacos/logs
+    ports:
+      - "${NACOS_UI_PORT}:8848"
+      - "${NACOS_PORT}:9848"
+    depends_on:
+      mysql:
+        condition: service_healthy
     networks:
       - deploy
