@@ -379,6 +379,7 @@ services:
     image: nacos/nacos-server:v2.2.2
     container_name: nacos
     restart: always
+    platform: linux/x86_64
     env_file:
       - ./nacos/env/nacos-standlone-mysql.env
     volumes:
@@ -387,7 +388,6 @@ services:
       - "${NACOS_UI_PORT}:8848"
       - "${NACOS_PORT}:9848"
     depends_on:
-      mysql:
-        condition: service_healthy
+      - mysql
     networks:
       - deploy

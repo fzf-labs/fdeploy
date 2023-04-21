@@ -11,3 +11,4 @@ pyroscope
 postgresql
 rabbitmq/data
 rabbitmq/log
+nacos/logs
