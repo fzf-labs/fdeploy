@@ -230,6 +230,23 @@ services:
       - elasticsearch
     networks:
       - deploy
+  jaeger-standalone:
+    container_name: jaeger
+    image: 'jaegertracing/all-in-one:latest'
+    environment:
+      - TZ=${TZ}
+      - LOG_LEVEL=debug
+    ports:
+      - "${JAEGER_PORT}:16686"                        # 设置容器16686端口映射指定宿主机端口，用于宿主机访问可视化web
+      - "5775:5775/udp"
+      - "6831:6831/udp"
+      - "6832:6832/udp"
+      - "5778:5778"
+      - "14268:14268"
+      - "14250:14250"
+      - "9411:9411"
+    networks:
+      - deploy
   prometheus:
     container_name: prometheus
     image: 'bitnami/prometheus:latest'
@@ -245,6 +262,7 @@ services:
     container_name: etcd
     image: 'bitnami/etcd:3.4.15'
     restart: always
+    platform: linux/x86_64
     privileged: true
     volumes:
       - ./etcd:/bitnami/etcd
