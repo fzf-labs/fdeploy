@@ -164,6 +164,7 @@ services:
     image: 'hibiken/asynqmon:latest'
     container_name: asynq-manage
     restart: always
+    platform: linux/x86_64
     ports:
       - "${ASYNQ_MANAGE_PORT}:8080"
     command:
@@ -231,7 +232,7 @@ services:
     networks:
       - deploy
   jaeger-standalone:
-    container_name: jaeger
+    container_name: jaeger-standalone
     image: 'jaegertracing/all-in-one:latest'
     environment:
       - TZ=${TZ}
@@ -260,7 +261,7 @@ services:
       - deploy
   etcd:
     container_name: etcd
-    image: 'bitnami/etcd:3.4.15'
+    image: 'bitnami/etcd:latest'
     restart: always
     platform: linux/x86_64
     privileged: true
