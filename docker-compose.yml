@@ -248,6 +248,21 @@ services:
       - "9411:9411"
     networks:
       - deploy
+  jaeger-opentelemetry-standalone:
+    container_name: jaeger-opentelemetry-standalone
+    image: 'jaegertracing/opentelemetry-all-in-one:latest'
+    environment:
+      - TZ=${TZ}
+      - LOG_LEVEL=debug
+      - SPAN_STORAGE_TYPE=memory
+    platform: linux/x86_64
+    ports:
+      - "${JAEGER_PORT}:16686"                        # 设置容器16686端口映射指定宿主机端口，用于宿主机访问可视化web
+      - "13133:13133"
+      - "55680:55680"
+      - "55681:55681"
+    networks:
+      - deploy
   prometheus:
     container_name: prometheus
     image: 'bitnami/prometheus:latest'
